@@ -33,13 +33,16 @@ const UploadVideo = ({id,question}) => {
         <S.Title>영상 업로드</S.Title>
         <S.Question>오늘 질문?</S.Question>
         <form onSubmit={onSubmit}>
-            <input type="file" name="video" />
-            <input name="title" value={title} onChange={onChangeTitle}/>     
-            <button type="submit"/>       
+            <S.UploadDiv>
+                <S.UploadBtn></S.UploadBtn>
+                <input type="file" name="video" />
+            </S.UploadDiv>
+            <S.Zemok>제목</S.Zemok>
+            <S.VideoTitle name="title" value={title} onChange={onChangeTitle} placeholder='영상 제목 작성'/>     
+            <S.SubmitBtn type="submit">게시물 업로드</S.SubmitBtn>       
         </form>
         </>
     )
-
 }
 
 export default UploadVideo

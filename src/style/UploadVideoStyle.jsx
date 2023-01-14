@@ -30,7 +30,7 @@ export const UploadDiv = styled.div`
     align-items: center;
 
     padding-top: 2.25rem;
-    margin-bottom: 25.438rem;
+    margin-bottom: 15.438rem;
 `
 
 export const UploadBtn = styled.div`
@@ -49,6 +49,7 @@ export const UploadBtn = styled.div`
 export const Zemok = styled.h1`
     font-size: 2.125rem;
     font-weight: 600;
+    margin-left: 1.063rem;
 `
 
 export const VideoTitle = styled.input`

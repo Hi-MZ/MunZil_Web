@@ -13,9 +13,8 @@ const Router = () => {
         <Route path="/" element={<Main />} />
         <Route path="/auth" element={<Auth />} />
         <Route path="/info" element={<Myinfo />} />
-        <Route path="/add" element={<UploadVideo/>} />
+        <Route path="/add" element={<UploadVideo />} />
       </Routes>
-
       <Footer />
     </BrowserRouter>
   );

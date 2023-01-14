@@ -1,16 +1,31 @@
 import React from "react";
 import UploadVideo from "../components/UploadVideo";
+import VideoBox from "../components/VideoBox";
+import * as S from "../style/UploadVideoStyle";
+import { VideoNavBox, DivBox, TextP } from "../style/VideoBoxStyle";
+import Header from "../components/Header";
 
 const Main = () => {
   return (
     <>
-      <div>Main</div>
-
-      <div>동영상 받기</div>
-      <p>내 팔로워</p>
-      <div></div>
-      <p>모든 영상</p>
-      <div></div>
+      <Header></Header>
+      <DivBox level={4}></DivBox>
+      <S.Question>오늘의 질문?</S.Question>
+      <DivBox level={3}></DivBox>
+      <TextP>팔로잉</TextP>
+      <DivBox level={0.5}></DivBox>
+      <VideoNavBox>
+        <VideoBox></VideoBox>
+        <VideoBox></VideoBox>
+      </VideoNavBox>
+      <DivBox level={2}></DivBox>
+      <TextP>추천 영상</TextP>
+      <DivBox level={0.5}></DivBox>
+      <VideoNavBox>
+        <VideoBox></VideoBox>
+        <VideoBox></VideoBox>
+        <VideoBox></VideoBox>
+      </VideoNavBox>
     </>
   );
 };

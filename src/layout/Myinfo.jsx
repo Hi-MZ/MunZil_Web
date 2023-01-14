@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import Header from "../components/Header";
 
 const Myinfo = () => {
   const [nickname] = useState("");
   return (
     <>
+      <Header></Header>
       <div>사진</div>
       <p>{nickname}</p>
       <nav>

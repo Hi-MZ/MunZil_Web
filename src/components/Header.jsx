@@ -6,7 +6,7 @@ const Header = () => {
     <>
       <button
         onClick={() => {
-          console.log(localStorage.getItem("Token"));
+          console.log(localStorage.removeItem("Token"));
         }}
       >
         ddd

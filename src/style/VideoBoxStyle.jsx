@@ -6,7 +6,7 @@ export const VideoNavBox = styled.nav`
   display: flex;
 `;
 
-export const Video = styled.div`
+export const Video = styled.video`
   width: 7.688rem;
   height: 14.375rem;
   background-color: gray;

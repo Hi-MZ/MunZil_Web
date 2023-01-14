@@ -1,22 +1,13 @@
 import React, { useEffect, useState } from "react";
 import * as S from "../style/VideoBoxStyle";
-import customAxios from "../util/customAxios";
 
-const VideoBox = () => {
-  const [a, b] = useState(1 + 1);
-  const [heartCh, setHeartCh] = useState(false);
-  useEffect(() => {
-    if (heartCh) {
-      b(a + 1);
-    } else {
-      b(a - 1);
-    }
-  }, [heartCh]);
-
+const VideoBox = (props) => {
   return (
     <>
       <div>
-        <S.Video></S.Video>
+        <S.Video autoPlay loop muted playsInline>
+          <source src={props.videos} type="video/mp4" />
+        </S.Video>
       </div>
     </>
   );

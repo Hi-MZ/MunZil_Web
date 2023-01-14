@@ -1,10 +1,10 @@
 import styled from "styled-components";
-import Logo from "../assets/Logo.png";
+import Logo from "../assets/Logo1.png";
 
-export const MunZilLogo = styled.span`
+export const MunZilLogo = styled.div`
+  margin: 2rem 0 1rem 0;
   width: 4rem;
   height: 4rem;
-  margin: 2rem 0 0 0;
-  background-size: cover;
   background-image: url(${Logo});
+  background-size: cover;
 `;

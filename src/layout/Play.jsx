@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import customAxios from "../util/customAxios";
 import * as S from "../style/PlayStyle";
+import videos from "../assets/video/20230112_173318.mp4";
 /**
  * onClick={() => {
           customAxios
@@ -35,8 +36,8 @@ const Play = () => {
         <S.VideoInformation>파란 하늘 구경하기</S.VideoInformation>
         <S.PlayQuestionBox>1시간 전에 했던 일은?</S.PlayQuestionBox>
       </S.BottomNavBar>
-      <S.Videobox src="">
-        <source type="video/mp4" />
+      <S.Videobox autoPlay loop muted playsInline>
+        <source src={videos} type="video/mp4" />
       </S.Videobox>
     </>
   );

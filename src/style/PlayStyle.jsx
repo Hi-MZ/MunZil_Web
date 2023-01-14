@@ -43,7 +43,6 @@ export const LeftNavber = styled.span`
 
 export const Videobox = styled.video`
   width: 100%;
-  background-color: green;
   height: 80%;
   margin-top 1rem;;
 `;

@@ -10,5 +10,4 @@ export const Frame = styled.nav`
   margin: 0 auto;
   height: 100%;
   width: 24.375rem;
-  overflow: auto;
 `;

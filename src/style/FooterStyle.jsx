@@ -53,6 +53,8 @@ export const FooterIcon = styled.div`
         return User;
       case "InUser":
         return InUser;
+      default:
+        return null;
     }
   }});
   background-size: cover;

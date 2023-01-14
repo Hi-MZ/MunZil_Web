@@ -10,7 +10,6 @@ const Footer = () => {
     InPlay: false,
     InUser: false,
   });
-  const [isLoggin, setIsLoggin] = useState(true);
   return (
     <S.Footer>
       <S.MainFooter>

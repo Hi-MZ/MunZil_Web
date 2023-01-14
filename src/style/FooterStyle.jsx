@@ -17,7 +17,6 @@ export const Footer = styled.footer`
 `;
 
 export const MainFooter = styled.nav`
-  margin: 0 auto;
   width: 24.375rem;
   height: 100%;
   border-radius: 0.625rem 0.625rem 0 0;

@@ -31,7 +31,7 @@ const Footer = () => {
           <S.FooterIcon
             value={isIn.InAdd ? "InAdd" : "Add"}
             onClick={() => {
-              navigate("/");
+              navigate("/add");
               let a = {
                 InHome: false,
                 InAdd: false,
@@ -44,7 +44,7 @@ const Footer = () => {
           <S.FooterIcon
             value={isIn.InPlay ? "InPlay" : "Play"}
             onClick={() => {
-              navigate("/");
+              navigate("/play");
               let a = {
                 InHome: false,
                 InAdd: false,
@@ -57,7 +57,7 @@ const Footer = () => {
           <S.FooterIcon
             value={isIn.InUser ? "InUser" : "User"}
             onClick={() => {
-              navigate("/");
+              navigate("/auth");
               let a = {
                 InHome: false,
                 InAdd: false,

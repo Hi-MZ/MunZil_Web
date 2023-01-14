@@ -12,29 +12,29 @@ import * as S from "../style/PlayStyle";
         }}
  */
 const Play = () => {
-  const [sortType, setSortType] = useState("POPULAR");
+  useEffect(() => {
+    customAxios
+      .get(`/feeds?sortType=${sortType}`)
+      .then((e) => {
+        console.log(e);
+      })
+      .catch((e) => console.log(e));
+  }, []);
+  const [sortType, setSortType] = useState("LATEST");
   return (
     <>
       <S.TopNavbar>
         <S.LeftNavber>
-          <span>name</span>
-          <button
-            onClick={() => {
-              customAxios
-                .get(`/feeds?sortType=${sortType}`)
-                .then((e) => {
-                  console.log(e);
-                })
-                .catch((e) => console.log(e));
-            }}
-          >
-            dd
-          </button>
+          <S.UserImg></S.UserImg>
+          <S.UserContent>배경민</S.UserContent>
         </S.LeftNavber>
-        <S.RightNavbar>
-          <span>follow</span>
-        </S.RightNavbar>
+        <S.UserRightContent>follow</S.UserRightContent>
       </S.TopNavbar>
+      <S.BottomNavBar>
+        <S.VideoDate>- 2023.01.14 -</S.VideoDate>
+        <S.VideoInformation>파란 하늘 구경하기</S.VideoInformation>
+        <S.PlayQuestionBox>1시간 전에 했던 일은?</S.PlayQuestionBox>
+      </S.BottomNavBar>
       <S.Videobox src="">
         <source type="video/mp4" />
       </S.Videobox>

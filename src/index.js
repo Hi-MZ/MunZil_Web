@@ -4,15 +4,18 @@ import "./style/index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Frame, Main } from "./style/MainFrameStyle";
+import { RecoilRoot } from "recoil";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Main>
-      <Frame>
-        <App />
-      </Frame>
-    </Main>
+    <RecoilRoot>
+      <Main>
+        <Frame>
+          <App />
+        </Frame>
+      </Main>
+    </RecoilRoot>
   </React.StrictMode>
 );
 

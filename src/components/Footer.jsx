@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useRecoilState } from "recoil";
+import { footerState } from "../store/atom";
 import * as S from "../style/FooterStyle";
 
 const Footer = () => {
+  const token = localStorage.getItem("Token");
   const navigate = useNavigate();
-  const [isIn, setIsIn] = useState({
-    InHome: true,
-    InAdd: false,
-    InPlay: false,
-    InUser: false,
-  });
+  const [isIn, setIsIn] = useRecoilState(footerState);
   return (
     <S.Footer>
       <S.MainFooter>
@@ -18,52 +16,26 @@ const Footer = () => {
             value={isIn.InHome ? "InHome" : "Home"}
             onClick={() => {
               navigate("/");
-              let a = {
-                InHome: false,
-                InAdd: false,
-                InPlay: false,
-                InUser: false,
-              };
-              setIsIn({ ...a, InHome: true });
             }}
           ></S.FooterIcon>
           <S.FooterIcon
             value={isIn.InAdd ? "InAdd" : "Add"}
             onClick={() => {
               navigate("/add");
-              let a = {
-                InHome: false,
-                InAdd: false,
-                InPlay: false,
-                InUser: false,
-              };
-              setIsIn({ ...a, InAdd: true });
             }}
           ></S.FooterIcon>
           <S.FooterIcon
             value={isIn.InPlay ? "InPlay" : "Play"}
             onClick={() => {
               navigate("/play");
-              let a = {
-                InHome: false,
-                InAdd: false,
-                InPlay: false,
-                InUser: false,
-              };
-              setIsIn({ ...a, InPlay: true });
             }}
           ></S.FooterIcon>
           <S.FooterIcon
             value={isIn.InUser ? "InUser" : "User"}
             onClick={() => {
-              navigate("/auth");
-              let a = {
-                InHome: false,
-                InAdd: false,
-                InPlay: false,
-                InUser: false,
-              };
-              setIsIn({ ...a, InUser: true });
+              {
+                token ? navigate("/info") : navigate("/auth");
+              }
             }}
           ></S.FooterIcon>
           {/* <h2 onClick={() => navigate("/")}>title</h2>

@@ -1,15 +1,23 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import moment from "moment";
 import "moment/locale/ko";
 import * as S from "../style/UploadVideoStyle";
 import Header from "./Header";
+import { footerState } from "../store/atom";
+import { useSetRecoilState } from "recoil";
 
 //닉네임(또는 아이디), 오늘 질문 받기
 const UploadVideo = ({ id, question }) => {
   const [title, setTitle] = useState();
   const nowDate = moment().format("YYYY-MM-DD");
   const nowTime = moment().format("YYYY-MM-DD hh:mm:ss");
+
+  const setFooter = useSetRecoilState(footerState);
+  useEffect(() => {
+    let a = { InHome: false, InAdd: false, InPlay: false, InUser: false };
+    setFooter({ ...a, InAdd: true });
+  }, []);
 
   const onChangeTitle = (e) => {
     setTitle(e.target.value);

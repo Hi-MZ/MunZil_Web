@@ -5,6 +5,7 @@ import UploadVideo from "./components/UploadVideo";
 import Auth from "./layout/Auth";
 import Main from "./layout/Main";
 import Myinfo from "./layout/Myinfo";
+import Play from "./layout/Play";
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
         <Route path="/auth" element={<Auth />} />
         <Route path="/info" element={<Myinfo />} />
         <Route path="/add" element={<UploadVideo />} />
+        <Route path="/play" element={<Play />} />
       </Routes>
       <Footer />
     </BrowserRouter>

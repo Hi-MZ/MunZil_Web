@@ -4,15 +4,8 @@ import VideoBox from "../components/VideoBox";
 import * as S from "../style/UploadVideoStyle";
 import { VideoNavBox, DivBox, TextP } from "../style/VideoBoxStyle";
 import Header from "../components/Header";
-import { footerState } from "../store/atom";
-import { useSetRecoilState } from "recoil";
 
 const Main = () => {
-  const setFooter = useSetRecoilState(footerState);
-  useEffect(() => {
-    let a = { InHome: false, InAdd: false, InPlay: false, InUser: false };
-    setFooter({ ...a, InHome: true });
-  }, []);
   return (
     <>
       <Header></Header>

@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useRecoilState } from "recoil";
-import { footerState } from "../store/atom";
 import * as S from "../style/FooterStyle";
 
 const Footer = () => {
   const token = localStorage.getItem("Token");
   const navigate = useNavigate();
-  const [isIn, setIsIn] = useRecoilState(footerState);
+  const [isIn, setIsIn] = useState("");
   return (
     <S.Footer>
       <S.MainFooter>

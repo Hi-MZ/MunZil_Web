@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import User from "../assets/user_normal.png";
 
 export const TopNavbar = styled.nav`
   width: 100%;
@@ -28,8 +29,9 @@ export const UserRightContent = styled.p`
 export const UserImg = styled.div`
   width: 3rem;
   height: 3rem;
-  border-radius: 48%;
-  background-color: green;
+  border-radius: 50%;
+  background-image: url(${User});
+  background-size: cover;
 `;
 
 export const RightSpan = styled.span``;

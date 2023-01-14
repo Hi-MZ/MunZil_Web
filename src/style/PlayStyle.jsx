@@ -69,10 +69,12 @@ export const PlayQuestionBox = styled.div`
 
 export const VideoDate = styled.p`
   margin-left: 2rem;
+  text-shadow: 1px 1px 5px white;
 `;
 
 export const VideoInformation = styled.p`
   margin-left: 2rem;
   font-size: 1.2rem;
   font-weight: bold;
+  text-shadow: 1px 1px 5px white;
 `;

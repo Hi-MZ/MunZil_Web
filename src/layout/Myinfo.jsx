@@ -4,12 +4,12 @@ import * as S from "../style/MyinfoStyle";
 import VideoBox from "../components/VideoBox";
 import * as Fo from "../components/Follow";
 import customAxios from "../util/customAxios";
-import videos1 from "../assets/video/20230114_220219.mp4";
-import videos2 from "../assets/video/20230107_132626.mp4";
-import videos3 from "../assets/video/20230112_180607.mp4";
-import videos4 from "../assets/video/KakaoTalk_Video_2023-01-15-07-18-46.mp4";
-import videos5 from "../assets/video/KakaoTalk_Video_2023-01-15-07-18-51.mp4";
-import videos6 from "../assets/video/KakaoTalk_Video_2023-01-15-07-18-36.mp4";
+import videos1 from "../assets/video/video7.mp4";
+import videos2 from "../assets/video/video8.mp4";
+import videos3 from "../assets/video/video9.mp4";
+import videos4 from "../assets/video/video10.mp4";
+import videos5 from "../assets/video/video11.mp4";
+import videos6 from "../assets/video/video12.mp4";
 
 const Myinfo = () => {
   const [nickname] = useState("");
@@ -49,14 +49,14 @@ const Myinfo = () => {
       <p>내 동영상</p>
       <div>
         <S.Align>
-          <VideoBox videos={videos1} />
-          <VideoBox videos={videos4} />
-          <VideoBox videos={videos5} />
+          <VideoBox videos={videos1} id={1} />
+          <VideoBox videos={videos4} id={4} />
+          <VideoBox videos={videos5} id={5} />
         </S.Align>
         <S.Align>
-          <VideoBox videos={videos3} />
-          <VideoBox videos={videos6} />
-          <VideoBox videos={videos2} />
+          <VideoBox videos={videos3} id={3} />
+          <VideoBox videos={videos6} id={6} />
+          <VideoBox videos={videos2} id={2} />
         </S.Align>
       </div>
     </>
